@@ -20,7 +20,7 @@ def get_location(ip):
     except Exception as e:
         print(f"Error fetching location for IP {ip}: {e}")
     return None
-js() = 1
+js = 1
 def convert_ips(input_urls, output_files):
     for input_url, output_file in zip(input_urls, output_files):
         ips = get_ips_from_url(input_url)  # 获取URL中的IP地址列表
@@ -29,10 +29,10 @@ def convert_ips(input_urls, output_files):
             for ip in ips:
                 location = get_location(ip)
                 if location:
-                    f.write(f"{ip}#{location} js()\n")
+                    f.write(f"{ip}#{location}" + js + "\n")
                 else:
-                    f.write(f"{ip}#Unknown js()\n")
-js() = js() + 1
+                    f.write(f"{ip}#Unknown" + js + "\n")
+js = js + 1
 if __name__ == "__main__":
     input_urls = ["https://ipdb.api.030101.xyz/?type=bestproxy", "https://ipdb.api.030101.xyz/?type=bestcf"]  # 包含IP地址的txt文件的多个URL
     output_files = ["bestproxy.txt", "bestcf.txt"]
