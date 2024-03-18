@@ -22,11 +22,12 @@ def get_location(ip):
     return None
 
 def convert_ips(input_urls, output_files):
-    js = 1
+
     for input_url, output_file in zip(input_urls, output_files):
         ips = get_ips_from_url(input_url)  # 获取URL中的IP地址列表
         
         with open(output_file, 'w') as f:
+            js = 1
             for ip in ips:
                 location = get_location(ip)
                 if location:
