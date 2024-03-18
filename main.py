@@ -29,9 +29,9 @@ def convert_ips(input_urls, output_files):
             for ip in ips:
                 location = get_location(ip)
                 if location:
-                    f.write(f"{ip}#{location}" js"\n")
+                    f.write(f"{ip}#{location} (js)\n")
                 else:
-                    f.write(f"{ip}#Unknown" js"\n")
+                    f.write(f"{ip}#Unknown (js)\n")
 js = js + 1
 if __name__ == "__main__":
     input_urls = ["https://ipdb.api.030101.xyz/?type=bestproxy", "https://ipdb.api.030101.xyz/?type=bestcf"]  # 包含IP地址的txt文件的多个URL
