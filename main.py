@@ -20,11 +20,11 @@ def get_location(ip):
     except Exception as e:
         print(f"Error fetching location for IP {ip}: {e}")
     return None
-js = 1
+
 def convert_ips(input_urls, output_files):
     for input_url, output_file in zip(input_urls, output_files):
         ips = get_ips_from_url(input_url)  # 获取URL中的IP地址列表
-        
+js = 1        
         with open(output_file, 'w') as f:
             for ip in ips:
                 location = get_location(ip)
